@@ -25,13 +25,6 @@ class GFG
 //User function Template for Java
 
 
-class Solution{
-    static int evenlyDivides(int N){
-        // code here
-        
-
-//User function Template for Java
-
 
 class Solution{
     static int evenlyDivides(int N){
@@ -46,7 +39,5 @@ class Solution{
             if(temp % rem == 0) count++;
         }
         return count;
-    }
-}
-    }
+     }
 }
