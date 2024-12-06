@@ -1,21 +1,25 @@
 class Solution {
-    public boolean searchMatrix(int[][] matrix, int target) {
-        int m = matrix.length, n = matrix[0].length;
-        int left = 0, right = m * n - 1;
-
-        while (left <= right) {
-            int mid = left + (right - left) / 2;
-            int midValue = matrix[mid / n][mid % n]; // Convert 1D index to 2D indices
-
-            if (midValue == target) {
-                return true;
-            } else if (midValue < target) {
-                left = mid + 1;
-            } else {
-                right = mid - 1;
+    int minRow(int mat[][]) {
+        int n = mat.length; // Number of rows
+        int m = mat[0].length; // Number of columns
+        
+        int[] s = new int[n];
+        int g = 0;
+        
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                s[i] += mat[i][j];
             }
         }
-
-        return false;
+        
+        int t = s[0], r = 0;
+        for (int i = 1; i < n; i++) {
+            if (s[i] < t) {
+                t = s[i];
+                r = i;
+            }
+        }
+        
+        return r + 1; // Returning 1-based index
     }
 }
