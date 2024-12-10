@@ -1,44 +1,29 @@
 class Solution {
     public int[] matrixDiagonally(int[][] mat) {
-        int n = mat[0].length;
-      int ans [] = new int[n*n];
-      int i=0,j=0,k=0,p=0;
-      // for top half matrix
-      for(k=0;k<n;k++){
-          i=0;j=k;
-          if((i+j)%2==0){
-              i=k; j=0;
-              while(i>=0 && j<=k){
-                  ans[p++]=mat[i][j];
-                  i--;
-                  j++;
-              }
-          }else{
-              while(i<n && j>=0){
-                ans[p++]=mat[i][j];
-                i++;
-                j--;
-            }  
-          }
-      }
-       // for bottom half matrix
-      for(k=1;k<n;k++){
-           i=k;j=n-1;
-          if((i+j)%2==0){
-              i=n-1; j=k;
-              while(i>=0 && j<n){
-                  ans[p++]=mat[i][j];
-                  i--;
-                  j++;
-              }
-          }else{
-            while(i<n && j>=0){
-                ans[p++]=mat[i][j];
-                  i++;
-                j--;
-            }  
-          }
-      }
-      return ans;
+       int n=mat.length,m=mat[0].length,row=0,col=0;
+       int[] result=new int[n*m];
+       for(int i=0;i<result.length;i++){
+           result[i]=mat[row][col];
+           if((row+col)%2==0){
+               if(col==n-1){
+                   row++;
+               }else if(row==0){
+                   col++;
+               }else{
+                   row--;
+                   col++;
+               }
+           }else{
+               if(row==m-1){
+                   col++;
+               }else if(col==0){
+                   row++;
+               }else{
+                   row++;
+                   col--;
+               }
+           }
+       }
+       return result;
     }
 }
