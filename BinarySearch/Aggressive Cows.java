@@ -28,6 +28,6 @@ class Solution {
                 if (count == cows) return true; // Early exit
             }
         }
-        return false;
+        return false;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
     }
 }
