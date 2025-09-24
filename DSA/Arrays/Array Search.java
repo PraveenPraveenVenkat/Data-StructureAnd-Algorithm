@@ -12,14 +12,9 @@ class Solution {
 }
 
 
-
-
-
-// old Submission
+//* old Submission
 // class Solution {
-
 //     static int search(int arr[], int x) {
-
 //             int i=0;
 //         int len = arr.length;
 //         while(i<len){
