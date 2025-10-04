@@ -19,7 +19,7 @@ class Solution {
         StringBuilder result = new StringBuilder();
         int n =s.length(), i=0;
         while(i<n){
-            //
+            //Search the First non space Character
             while(i<n && s.charAt(i)==' ') i++;
             if(i>=n) break;
             int j =i+1;
