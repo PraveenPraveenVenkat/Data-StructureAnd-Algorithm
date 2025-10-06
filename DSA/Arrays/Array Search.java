@@ -1,4 +1,6 @@
 //!GFG
+//* Time Complexity: O(n)
+//* Space Complexity: O(1) (constant space)
 class Solution {
     public int search(int arr[], int x) {
         // code here

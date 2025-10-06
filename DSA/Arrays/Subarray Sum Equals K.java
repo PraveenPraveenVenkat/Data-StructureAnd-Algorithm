@@ -13,6 +13,8 @@
 
 
 //* (Brute Force)
+//* TC: O(n²)
+//* SC: O(1)
 class Solution {
     public int subarraySum(int[] nums, int k) {
         int count = 0;
@@ -31,6 +33,8 @@ class Solution {
 
 
 //*optimal Solution By Hareesh
+//* TC: O(n)
+//* SC: O(n)
 class Solution {
     public int subarraySum(int[] nums, int k) {
         int n =nums.length;
@@ -50,9 +54,3 @@ class Solution {
              return count;
         }  
     }
-
-
-
-
-
-

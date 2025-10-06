@@ -1,4 +1,6 @@
 //! LeetCode 162
+//* TC: O(n)
+//* SC: O(1)
 class Solution {
     public int findPeakElement(int[] nums) {
         

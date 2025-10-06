@@ -1,4 +1,6 @@
 //! Leetcode 169
+//* TC: O(n log n)
+//* SC: O(1)
 class Solution {
     public int majorityElement(int[] nums) {
         
@@ -10,6 +12,8 @@ class Solution {
 }
 
 //* Hareesh Solution
+//* TC: O(n)
+//* SC: O(1)
 // class Solution {
 //     public int majorityElement(int[] nums) {
         

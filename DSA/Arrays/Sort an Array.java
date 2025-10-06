@@ -1,4 +1,6 @@
 //! LeetCode 912
+//* TC: O(n log n)
+//* SC: O(1)
 class Solution {
     public int[] sortArray(int[] nums) {
             Arrays.sort(nums);
@@ -7,7 +9,8 @@ class Solution {
 
     }
 
-
+//* TC: O(n²)
+//* SC: O(1)
 // class Solution {
 //     public int[] sortArray(int[] nums) {
          //* Simple bubble sort

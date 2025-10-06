@@ -1,4 +1,6 @@
 //! LeetCode 525
+//* TC: O(n)
+//* SC: O(n)
 class Solution {
     public int findMaxLength(int[] nums) {
         int sum =0, longest =0;

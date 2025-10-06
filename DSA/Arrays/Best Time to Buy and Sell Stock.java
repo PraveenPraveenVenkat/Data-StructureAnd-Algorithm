@@ -1,6 +1,8 @@
 //! Leetcode 121
 class Solution {
     public int maxProfit(int[] prices) {
+        //*TC: O(n)
+       //* SC: O(1)
         //  int n = prices.length;
         //  int max = n[0];
         // //  int maxIndex = 0;
@@ -26,6 +28,8 @@ class Solution {
 }
 
 //* Hareesh Solution
+//* TC: O(n)
+//* SC: O(1)
 // class Solution {
 //     public int maxProfit(int[] prices) {
 //      int minPrice = prices[0];

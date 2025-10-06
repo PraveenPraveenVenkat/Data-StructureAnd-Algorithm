@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
 
+//* TC: O(n)
+//* SC: O(n)
 class Solution {
     public int[][] insert(int[][] intervals, int[] newInterval) {
         List<int[]> result = new ArrayList<>();

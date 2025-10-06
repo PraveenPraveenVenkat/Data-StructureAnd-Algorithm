@@ -1,4 +1,6 @@
 //! GFG
+//* TC: O(n)
+//* SC: O(n)
 class Solution {
     ArrayList<String> extractIntegerWords(String s) {
         // code here
