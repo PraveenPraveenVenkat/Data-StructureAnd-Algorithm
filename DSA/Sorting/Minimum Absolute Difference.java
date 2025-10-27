@@ -14,6 +14,8 @@ class Solution {
 
            if(current<minDiff){
             res= new ArrayList<>();
+            //* or
+            //  res.clear();
             minDiff = current;
            }
            if(current == minDiff){
