@@ -12,51 +12,118 @@ class Solution {
 //! Merge Sort
 //* TC: O(n log n)
 //* SC: O(n)
-class Solution {
-    public int[] sortArray(int[] nums) {
-        mergeSort(nums, 0, nums.length - 1);
-        return nums;
-    }
+  //? Hareesh Approach
+// class Solution {
+//     public int[] sortArray(int[] nums) {
+//         mergeSort(nums, 0, nums.length - 1);
+//         return nums;
+//     }
 
-    private void mergeSort(int[] array, int low, int high) {
-        if (low >= high) {
-            return;
-        }
-        int mid = low + (high - low) / 2;
-        mergeSort(array, low, mid);
-        mergeSort(array, mid + 1, high);
-        merge(array, low, mid, high);
-    }
+//     private void mergeSort(int[] arr, int left, int right) {
+//         if (left >= right) {
+//             return;
+//         }
+//         int mid = left + (right - left) / 2;
+//         mergeSort(arr, left, mid);
+//         mergeSort(arr, mid + 1, right);
+//         //Merging Or Conquer
+//         merge(arr, left, mid, right);
+//     }
 
-    private void merge(int[] array, int low, int mid, int high) {
-        int n1 = mid - low + 1;
-        int n2 = high - mid;
-        int[] leftPart = new int[n1];
-        int[] rightPart = new int[n2];
+//     private void merge(int[] arr, int left, int mid, int high) {
+//         int n1 = mid - left + 1;
+//         int n2 = high - mid;
+//         int[] l1 = new int[n1];
+//         int[] l2 = new int[n2];
 
-        System.arraycopy(array, low, leftPart, 0, n1);
-        System.arraycopy(array, mid + 1, rightPart, 0, n2);
+//         //Create List 1
+//         for (int i = 0; i < n1; i++)
+//             l1[i] = arr[left + i];
 
-        int p1 = 0, p2 = 0, writeInd = low;
-        while (p1 < n1 && p2 < n2) {
-            if (leftPart[p1] <= rightPart[p2]) {
-                array[writeInd++] = leftPart[p1++];
-            } else {
-                array[writeInd++] = rightPart[p2++];
-            }
-        }
+//         //Create List 2
+//         for (int j = 0; j < n2; j++)
+//             l2[j] = arr[mid + 1 + j];
 
-        while (p1 < n1) {
-            array[writeInd++] = leftPart[p1++];
-        }
+//         int i = 0, j = 0, counter = 0;
+//         int res[] = new int[n1 + n2];
 
-        while (p2 < n2) {
-            array[writeInd++] = rightPart[p2++];
-        }
-    }
-}
+//         while (i < n1 && j < n2) {
+//             if (l1[i] < l2[j]) {
+//                 res[counter] = l1[i];
+//                 i++;
+//             } else {
+//                 res[counter] = l2[j];
+//                 j++;
+//             }
+//             counter++;
+//         }
+//         while (i < n1) {
+//             res[counter++] = l1[i++];
+//         }
+//         while (j < n2) {
+//             res[counter++] = l1[j++];
+//         }
+
+//         for (int k = 0; k<n1+n2; k++)  arr[left + k] = res[k];
+//     }
+// }
 
 
+// //? Optimal Approach
+// class Solution {
+//     public int[] sortArray(int[] nums) {
+//         mergeSort(nums, 0, nums.length - 1);
+//         return nums;
+//     }
+
+//     private void mergeSort(int[] arr, int left, int right) {
+//         if (left >= right) {
+//             return;
+//         }
+//         int mid = left + (right - left) / 2;
+//         mergeSort(arr, left, mid);
+//         mergeSort(arr, mid + 1, right);
+//         //Merging Or Conquer
+//         merge(arr, left, mid, right);
+//     }
+
+//     private void merge(int[] arr, int left, int mid, int high) {
+//         int n1 = mid - left + 1;
+//         int n2 = high - mid;
+//         int[] l1 = new int[n1];
+//         int[] l2 = new int[n2];
+
+//         //Create List 1
+//         for (int i = 0; i < n1; i++)
+//             l1[i] = arr[left + i];
+
+//         //Create List 2
+//         for (int j = 0; j < n2; j++)
+//             l2[j] = arr[mid + 1 + j];
+
+//         int i = 0, j = 0, counter = left;
+//         // int res[] = new int[n1 + n2];
+
+//         while (i < n1 && j < n2) {
+//             if (l1[i] < l2[j]) {
+//                 arr[counter] = l1[i];
+//                 i++;
+//             } else {
+//                 arr[counter] = l2[j];
+//                 j++;
+//             }
+//             counter++;
+//         }
+//         while (i < n1) {
+//             arr[counter++] = l1[i++];
+//         }
+//         while (j < n2) {
+//             arr[counter++] = l1[j++];
+//         }
+
+//         // for (int k = 0; k<n1+n2; k++)  arr[left + k] = res[k];
+//     }
+// }
 
 
 
