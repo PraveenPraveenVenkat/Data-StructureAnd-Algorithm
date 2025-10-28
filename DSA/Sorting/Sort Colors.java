@@ -17,6 +17,6 @@ class Solution {
        }else{
          mid++;
        }
-      
+       }
     }
 }
