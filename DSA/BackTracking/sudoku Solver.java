@@ -1,3 +1,6 @@
+//! 37 LeetCode
+//* TCO(O(N^9)) SC(O(1))
+//  */
 class Solution {
     public void solveSudoku(char[][] board) {
         solve(board);
@@ -34,3 +37,6 @@ class Solution {
         return true;
     }
 }
+
+
+Optmized isvalid Function
